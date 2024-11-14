@@ -139,6 +139,13 @@ for url in urls:
 with open('images.json', 'w') as f:
   json.dump(images, f)
 ```
+Attention ! Si ce message d'erreur s'affiche dans la console :
+```
+ raise FeatureNotFound(
+bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+```
+Installer "lxml" à l'aide de cette commande : `pip install lxml`
+
 À la suite de l’exécution de ce script, un fichier `images.json` contient les urls de l’ensemble des images à télécharger :
 
 <pre markdown="0">
